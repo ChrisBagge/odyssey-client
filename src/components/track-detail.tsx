@@ -25,10 +25,10 @@ const TrackDetail = ({ track }: { track: Track }) => {
     description,
     thumbnail,
     author,
-    length,
     modulesCount,
     modules,
     numberOfViews,
+    durationInSeconds
   } = track;
 
   return (
@@ -51,7 +51,7 @@ const TrackDetail = ({ track }: { track: Track }) => {
             </IconAndLabel>
             <IconAndLabel>
               <IconTime width="14px" />
-              <div>{humanReadableTimeFromSeconds(length)}</div>
+              <div>{humanReadableTimeFromSeconds(durationInSeconds)}</div>
             </IconAndLabel>
           </DetailItem>
           <DetailItem>
@@ -79,7 +79,7 @@ const TrackDetail = ({ track }: { track: Track }) => {
                 <li key={module.title}>
                   <div>{module.title}</div>
                   <ModuleLength>
-                    {humanReadableTimeFromSeconds(module.length)}
+                    {humanReadableTimeFromSeconds(module.durationInSeconds)}
                   </ModuleLength>
                 </li>
               ))}

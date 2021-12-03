@@ -22,6 +22,7 @@ export const TRACKS = gql`
         name
         photo
       }
+      durationInSeconds
     }
   }
 `;

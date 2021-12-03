@@ -6,7 +6,8 @@ export interface Author {
 export interface Module {
   id: string,
   title: string,
-  length: number
+  length: number,
+  durationInSeconds: number
 }
 
 export interface Track {
@@ -18,7 +19,8 @@ export interface Track {
   modulesCount?: number,
   description?: string,
   numberOfViews?: number,
-  modules: Module[]
+  modules: Module[],
+  durationInSeconds: number
 }
 
 export interface TrackForHome {

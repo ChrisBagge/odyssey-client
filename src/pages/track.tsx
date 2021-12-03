@@ -29,6 +29,7 @@ export const GET_TRACK = gql`
         length
       }
       description
+      durationInSeconds
     }
   }
 `;
